@@ -30,9 +30,8 @@ def index(request):
 	
 def about(request):
 
-	context_dict2 = {'boldmessage2': "This tutorial has been put together by Alan McNamee"}
-	return render(request, 'rango/about.html', context=context_dict2)
-	return HttpResponse("Rango says here is the about page <a href='/rango/'>Index</a>")
+	context_dict = {'MEDIA_URL': "/media/"}
+	return render(request, 'rango/about.html', context=context_dict)
 
 	
 def show_category(request, category_name_slug):
